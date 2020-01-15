@@ -8,6 +8,7 @@ syntax.add {
     --The commented out patterns rely on style additions yet to be upstreamed
     --https://github.com/rxi/lite/pull/10
     { pattern = "//[^/].-\n",               type = "comment"    },
+    { pattern = "//[^/]",                   type = "comment"    },
     --{ pattern = "///.-\n",                  type = "doccomment" },
     { pattern = "\\.-\n",                   type = "string"     },
     { pattern = { '"', '"', '\\' },         type = "string"     },
@@ -15,7 +16,7 @@ syntax.add {
     { pattern = "0x[%da-fA-F]+",            type = "number"     },
     { pattern = "-?%d+[%d%.eE]*",           type = "number"     },
     { pattern = "-?%.?%d+",                 type = "number"     },
-    { pattern = "[%+%-=/%*%^%%<>!~|&:,%.]", type = "operator"   },
+    { pattern = "[%+%-=/%*%^%%<>!~|&:,%.;]", type = "operator"   },
     --{ pattern = "[%[%]%(%){}]",             type = "bracket"    },
     { pattern = "[%a_][%w_]*%f[(]",         type = "function"   },
     { pattern = "@[%a_][%w_]*",             type = "keyword2"   },
