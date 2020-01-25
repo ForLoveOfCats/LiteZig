@@ -10,7 +10,7 @@ syntax.add {
     { pattern = "//[^/].-\n",               type = "comment"    },
     { pattern = "//[^/]",                   type = "comment"    },
     --{ pattern = "///.-\n",                  type = "doccomment" },
-    { pattern = "\\.-\n",                   type = "string"     },
+    { pattern = "\\\\.-\n",                 type = "string"     },
     { pattern = { '"', '"', '\\' },         type = "string"     },
     { pattern = { "'", "'", '\\' },         type = "string"     },
     { pattern = "0x[%da-fA-F]+",            type = "number"     },
